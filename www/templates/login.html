@@ -13,23 +13,19 @@
       </div>
 
     </div>
-    <div class="row">
+    <div class="row padding">
       <div class="col-20"></div>
       <div class="col-55" style="align:center">
-        <div class="list">
-
-
+        <div  class="list">
             <label class="item-input-wrapper">
-              <input type="text" placeholder="Login">
+              <input type="text" placeholder="Login" ng-model="user.name">
             </label><br>
             <label class="item-input-wrapper">
-              <input type="text" placeholder="mot de passe">
+              <input type="password" placeholder="mot de passe" ng-model="user.pass" >
             </label><br>
-            <button class="button button-assertive" style="align:center">
+            <button class="button button-assertive" style="align:center" ng-click="doLogin()" >
               OK
             </button>
-
-
       </div>
       <div class="col-25"></div>
     </div>
@@ -40,8 +36,8 @@
         <button class="button button-clear button-positive" style="text-decoration-color:#11c1f3;">
           <strong>mot de pass oublie?</strong>
         </button><br>
-        <button class="button button-clear button-positive" style="text-decoration-color:#11c1f3;" ng-click="inscription()">
-          <strong>je ne dispose pas de compte</strong>
+        <button class="button button-clear button-positive" style="text-decoration-color:#11c1f3;"  ng-click=" closeLogin()"> </button>
+          <strong><a href="#/app/inscription">je ne dispose pas de compte</a></strong>
         </button><br><br><br><br>
         <button class="button button-clear button-positive" style="text-decoration-color:#11c1f3;" >
           <strong>study worry free</strong>

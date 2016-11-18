@@ -19,7 +19,12 @@ angular.module('starter.controllers', [])
     $scope.modal = modal;
   });
 
-  // Triggered in the login modal to close it
+  // Triggered in the login modal to close i
+
+    $scope.user={
+      name:"",
+      pass:""
+    };
   $scope.closeLogin = function() {
     $scope.modal.hide();
   };
@@ -32,12 +37,21 @@ angular.module('starter.controllers', [])
   // Perform the login action when the user submits the login form
   $scope.doLogin = function() {
     console.log('Doing login', $scope.loginData);
+    console.log($scope.user);
+    if(($scope.user.name="colince") && ($scope.user.pass=="franklin")){
+      $scope.modal.hide();
+      $scope.user.name="";
+      $scope.user.pass="";
+    }else{
+       alert("veillez entrez les bonne informations")
+      console.log("pass incorrere");
+    }
 
     // Simulate a login delay. Remove this and replace with your login
     // code if using a login system
-    $timeout(function() {
-      $scope.closeLogin();
-    }, 1000);
+   // $timeout(function() {
+      //$scope.closeLogin();
+   // }, 1000);
   };
 })
 
