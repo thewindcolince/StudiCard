@@ -1,6 +1,172 @@
 <ion-view view-title="StudiCard">
+
   <ion-content>
-    <br><br><br>
-    <p>nous somme en manque d'actualite pour le moment</p>
+    <ion-slide-box slide-tabs-scrollable="false"  show-pager="false" ion-slide-tabs class="positive">
+      <ion-slide ion-slide-tab-label="<b>souscrire</b>">
+
+        <div class="">
+          <div class="list list-inset">
+            <div class="item item-divider" id="divide">
+              Identité
+            </div>
+            <div class="row responsive-md">
+              <div class="col col-50">
+                <label class="item item-input" id="divide">
+                  <input type="text" placeholder="Nom">
+                </label>
+              </div>
+              <div class="col col-10"></div>
+              <div class="col col-40">
+                <label class="item item-input" id="divide">
+                  <input type="text" placeholder="Prénom">
+                </label>
+              </div>
+            </div>
+            <div class="row responsive-md">
+              <div class="col col-40">
+                <label class = "item item-input item-select" id="divide">
+                  <div class = "input-label">
+                    Sexe
+                  </div>
+                  <select>
+                    <option selected>Homme</option>
+                    <option>Femme</option>
+                  </select>
+                </label>
+              </div>
+              <div class="col col-10"></div>
+              <div class="col col-50">
+                <label>Date de naisssance</label>
+                <label class="item item-input item-icon-right" id="divide">
+                  <input type="date" placeholder="Date de naissance">
+                  <i class="icon ion-calendar"></i>
+                </label>
+              </div>
+            </div>
+            <div class="row responsive-md">
+              <div class="col col-50">
+                <label class="item item-input"  id="divide">
+                  <input type="text" placeholder="Adresse">
+                </label>
+              </div>
+              <div class="col col-10"></div>
+              <div class="col col-40">
+                <label class="item item-input" id="divide">
+                  <input type="text" placeholder="ville">
+                </label>
+              </div>
+            </div>
+            <div class="item item-divider" id="divide">
+              Pièce d'identification
+            </div>
+            <div class="row responsive-md">
+              <div class="col col-33">
+                <label class = "item item-input item-select" id="divide">
+                  <div class = "input-label">&nbsp;
+                  </div>
+                  <select>
+                    <option selected>CNI</option>
+                    <option>Passport</option>
+                  </select>
+                </label>
+              </div>
+            </div>
+            <div class="row responsive-md">
+              <div class="col col-50">
+                <label>Date de delivrance</label>
+                <label class="item item-input item-icon-right" id="divide">
+                  <input type="date" placeholder="Date de délivrance">
+                  <i class="icon ion-calendar"></i>
+                </label>
+              </div>
+              <div class="col col-10"></div>
+              <div class="col col-40">
+                <label >Date d'expiration</label>
+                <label class="item item-input item-icon-right" id="divide">
+                  <input type="date" placeholder="Date d'expiration">
+                  <i class="icon ion-calendar"></i>
+                </label>
+              </div>
+            </div>
+            <div class="item item-divider" id="divide">
+              Contacts
+            </div>
+            <div class="row responsive-md">
+              <div class="col col-50">
+                <label class="item item-input" id="divide">
+                  <input type="number" placeholder="Tel principal">
+                </label>
+              </div>
+              <div class="col col-10"></div>
+              <div class="col col-40">
+                <label class="item item-input" id="divide">
+                  <input type="number" placeholder="Tel Secondaire">
+                </label>
+              </div>
+            </div>
+            <div class="row responsive-md">
+              <div class="col col-75">
+                <label class="item item-input" id="divide">
+                  <input type="email" placeholder="Email" size="75%">
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="row responsive-md">
+            <div class="col col-45"></div>
+            <div class="col col-10">
+              <div class="button positive">
+                Souscrire
+              </div>
+            </div>
+            <div class="col col-45"></div>
+          </div>
+        </div>
+        </ion-slide>
+
+      <ion-slide ion-slide-tab-label="<b>actualite</b>">
+        <div class="texte">
+          <h2 align="center">
+            <div class="list card">
+
+              <div class="item item-avatar">
+                <img src="../img/logo.png">
+                <h2>Marty McFly</h2>
+                <p>November 05, 1955</p>
+              </div>
+
+              <div class="item item-body">
+                <img class="full-image" src="../img/pressing_btn.png">
+                <p>
+                  This is a "Facebook" styled Card. The header is created from a Thumbnail List item,
+                  the content is from a card-body consisting of an image and paragraph text. The footer
+                  consists of tabs, icons aligned left, within the card-footer.
+                </p>
+                <p>
+                  <a href="#" class="subdued">1 Like</a>
+                  <a href="#" class="subdued">5 Comments</a>
+                </p>
+              </div>
+
+            </div>
+          </h2>
+        </div>
+      </ion-slide>
+      <ion-slide ion-slide-tab-label="<b>annuaire</b>">
+        <div class="texte">
+          <h2 align="center">
+            <div class="card">
+              <ion-list>
+                <ion-item ng-repeat="playlist in playlists" href="#/app/playlists/{{playlist.id}}">
+                  {{playlist.title}}
+                </ion-item>
+              </ion-list>
+              </div>
+            </div>
+
+          </h2>
+        </div>
+      </ion-slide>
+    </ion-slide-box>
   </ion-content>
 </ion-view>

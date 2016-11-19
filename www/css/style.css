@@ -8,4 +8,14 @@
   margin: 5px 5px 10px 5px;
 }
 
+.apropos-class{
+
+  border:solid;
+  font-family: sans-serif;
+  alignment-adjust:5px;
+  align:justify;
+  margin: auto;
+  padding: 15%;
+
+}
 

@@ -1,107 +1,121 @@
-
-
 <ion-view view-title="StudiCard">
   <ion-content >
     <br><br><br><br>
     <h2 class="text-center"><u>Nouvelle Souscription</u></h2>
-
+    <div class="">
       <div class="list list-inset">
-          <div class="item item-divider">
-              Identité
+        <div class="item item-divider" id="divide">
+          Identité
+        </div>
+        <div class="row responsive-md">
+          <div class="col col-50">
+            <label class="item item-input" id="divide">
+              <input type="text" placeholder="Nom">
+            </label>
           </div>
-          <div class="row responsive-md">
-              <div class="col col-50">
-                  <label class="item item-input">
-                      <input type="text" placeholder="Nom">
-                  </label>
-              </div>
-              <div class="col col-10"></div>
-              <div class="col col-40">
-                  <label class="item item-input">
-                      <input type="text" placeholder="Prénom">
-                  </label>
-              </div>
+          <div class="col col-10"></div>
+          <div class="col col-40">
+            <label class="item item-input" id="divide">
+              <input type="text" placeholder="Prénom">
+            </label>
           </div>
-          <div class="row responsive-md">
-              <div class="col col-40">
-                  <label class = "item item-input item-select">
-                      <div class = "input-label">
-                          Sexe
-                      </div>
-                      <select>
-                          <option selected>Homme</option>
-                          <option>Femme</option>
-                      </select>
-                  </label>
+        </div>
+        <div class="row responsive-md">
+          <div class="col col-40">
+            <label class = "item item-input item-select" id="divide">
+              <div class = "input-label">
+                Sexe
               </div>
-              <div class="col col-10"></div>
-              <div class="col col-50">
-                  <label class="item item-input item-icon-right">
-                      <input type="date" placeholder="Date de naissance">
-                      <i class="icon ion-calendar"></i>
-                  </label>
-              </div>
+              <select>
+                <option selected>Homme</option>
+                <option>Femme</option>
+              </select>
+            </label>
           </div>
-          <div class="row responsive-md">
-              <div class="col col-50">
-                  <label class="item item-input">
-                      <input type="text" placeholder="Adresse">
-                  </label>
-              </div>
-              <div class="col col-40">
-                  <label class="item item-input">
-                      <input type="text" placeholder="ville">
-                  </label>
-              </div>
+          <div class="col col-10"></div>
+          <div class="col col-50">
+            <label class="item item-input item-icon-right" id="divide">
+              <input type="date" placeholder="Date de naissance">
+              <i class="icon ion-calendar"></i>
+            </label>
           </div>
-          <div class="item item-divider">
-              Pièce d'identification
+        </div>
+        <div class="row responsive-md">
+          <div class="col col-50">
+            <label class="item item-input"  id="divide">
+              <input type="text" placeholder="Adresse">
+            </label>
           </div>
-          <div class="row responsive-md">
-              <div class="col col-33">
-                  <label class="item item-input item-select">
-                     <div class="input-label">CNI</div>
-                  </label>
-              </div>
+          <div class="col col-10"></div>
+          <div class="col col-40">
+            <label class="item item-input" id="divide">
+              <input type="text" placeholder="ville">
+            </label>
           </div>
-          <div class="row responsive-md">
-              <div class="col col-50">
-                  <label class="item item-input item-icon-right">
-                      <input type="date" placeholder="Date de délivrance">
-                      <i class="icon ion-calendar"></i>
-                  </label>
+        </div>
+        <div class="item item-divider" id="divide">
+          Pièce d'identification
+        </div>
+        <div class="row responsive-md">
+          <div class="col col-33">
+            <label class = "item item-input item-select" id="divide">
+              <div class = "input-label">&nbsp;
               </div>
-              <div class="col col-10"></div>
-              <div class="col col-40">
-                  <label class="item item-input item-icon-right">
-                      <input type="date" placeholder="Date d'expiration">
-                      <i class="icon ion-calendar"></i>
-                  </label>
-              </div>
+              <select>
+                <option selected>CNI</option>
+                <option>Passport</option>
+              </select>
+            </label>
           </div>
-          <div class="item item-divider">
-              Contacts
+        </div>
+        <div class="row responsive-md">
+          <div class="col col-50">
+            <label class="item item-input item-icon-right" id="divide">
+              <input type="date" placeholder="Date de délivrance">
+              <i class="icon ion-calendar"></i>
+            </label>
           </div>
-          <div class="row responsive-md">
-              <div class="col col-50">
-                  <label class="item item-input">
-                      <input type="text" placeholder="Tel principal">
-                  </label>
-              </div>
-              <div class="col col-10"></div>
-              <div class="col col-40">
-                  <label class="item item-input">
-                      <input type="text" placeholder="Tel Secondaire">
-                  </label>
-              </div>
+          <div class="col col-10"></div>
+          <div class="col col-40">
+            <label class="item item-input item-icon-right" id="divide">
+              <input type="date" placeholder="Date d'expiration">
+              <i class="icon ion-calendar"></i>
+            </label>
           </div>
-            <div class="row responsive-md">
-                <div class="col col-75">
-                  <label class="item item-input">
-                      <input type="text" placeholder="Email" size="75%">
-                  </label>
-                </div>
-            </div>
+        </div>
+        <div class="item item-divider" id="divide">
+          Contacts
+        </div>
+        <div class="row responsive-md">
+          <div class="col col-50">
+            <label class="item item-input" id="divide">
+              <input type="number" placeholder="Tel principal">
+            </label>
+          </div>
+          <div class="col col-10"></div>
+          <div class="col col-40">
+            <label class="item item-input" id="divide">
+              <input type="number" placeholder="Tel Secondaire">
+            </label>
+          </div>
+        </div>
+        <div class="row responsive-md">
+          <div class="col col-75">
+            <label class="item item-input" id="divide">
+              <input type="email" placeholder="Email" size="75%">
+            </label>
+          </div>
+        </div>
       </div>
+      <div class="row responsive-md">
+        <div class="col col-45"></div>
+        <div class="col col-10">
+          <div class="button">
+            Souscrire
+          </div>
+        </div>
+        <div class="col col-45"></div>
+      </div>
+    </div>
   </ion-content>
 </ion-view>

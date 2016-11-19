@@ -38,12 +38,13 @@ angular.module('starter.controllers', [])
   $scope.doLogin = function() {
     console.log('Doing login', $scope.loginData);
     console.log($scope.user);
+
     if(($scope.user.name="colince") && ($scope.user.pass=="franklin")){
       $scope.modal.hide();
       $scope.user.name="";
       $scope.user.pass="";
     }else{
-       alert("veillez entrez les bonne informations")
+       alert("veillez entrez les bonne informations");
       console.log("pass incorrere");
     }
 
@@ -57,12 +58,12 @@ angular.module('starter.controllers', [])
 
 .controller('PlaylistsCtrl', function($scope) {
   $scope.playlists = [
-    { title: 'Reggae', id: 1 },
-    { title: 'Chill', id: 2 },
-    { title: 'Dubstep', id: 3 },
-    { title: 'Indie', id: 4 },
-    { title: 'Rap', id: 5 },
-    { title: 'Cowbell', id: 6 }
+    { title: 'auto-ecole', id: 1 },
+    { title: 'clinique', id: 2 },
+    { title: 'hopitale', id: 3 },
+    { title: 'transport', id: 4 },
+    { title: 'ecole', id: 5 },
+    { title: 'universite', id: 6 }
   ];
 })
 

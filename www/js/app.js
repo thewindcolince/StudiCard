@@ -40,20 +40,38 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     }
   })
+    .state('app.login', {
+      url: '/login',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/login.html'
+        }
+      }
+    })
 
+    .state('app.favaris', {
+      url: '/favaris',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/favaris.html'
+        }
+      }
+    })
     .state('app.profile', {
       url: '/profile',
       views: {
         'menuContent': {
           templateUrl: 'templates/profile.html'
+
         }
       }
     })
-  .state('app.browse', {
-      url: '/browse',
+  .state('app.mention', {
+      url: '/mention',
       views: {
         'menuContent': {
-          templateUrl: 'templates/favaris.html'
+          templateUrl: 'templates/mention.html'
+
         }
       }
     })
@@ -76,15 +94,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     }
   })
-    .state('app.accueil', {
-      url: '/accueil',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/accueil.html',
-          controller: 'PlaylistsCtrl'
-        }
-      }
-    })
+
     .state('app.inscription', {
       url: '/inscription',
       views: {
