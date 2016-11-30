@@ -1,6 +1,6 @@
 angular.module('starter.controllers', [])
 
-.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
+.controller('AppCtrl', function($scope, $ionicModal, $timeout, $mdUtil, $mdSidenav, $log, $ionicHistory, $state, $ionicPlatform, $mdDialog, $mdBottomSheet, $mdMenu, $mdSelect) {
 
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
@@ -8,6 +8,97 @@ angular.module('starter.controllers', [])
   // listen for the $ionicView.enter event:
   //$scope.$on('$ionicView.enter', function(e) {
   //});
+    $scope.toggleLeft = buildToggler('left');
+
+    function buildToggler(navID) {
+      var debounceFn = $mdUtil.debounce(function () {
+        $mdSidenav(navID).toggle();
+      }, 0);
+      return debounceFn;
+    }
+
+    $scope.navigateTo = function (stateName) {
+      $timeout(function () {
+        $mdSidenav('left').close();
+        if ($ionicHistory.currentStateName() != stateName) {
+          $ionicHistory.nextViewOptions({
+            disableAnimate: true,
+            disableBack: true
+          });
+          $state.go(stateName);
+        }
+      }, ($scope.isAndroid == false ? 300 : 0));
+    };// End navigateTo.
+
+    //closeSideNav is for close side navigation
+    //It will use with event on-swipe-left="closeSideNav()" on-drag-left="closeSideNav()"
+    //When user swipe or drag md-sidenav to left side
+    $scope.closeSideNav = function(){
+      $mdSidenav('left').close();
+    };
+
+    $ionicPlatform.registerBackButtonAction(function(){
+
+      if($mdSidenav("left").isOpen()){
+        //If side navigation is open it will close and then return
+        $mdSidenav('left').close();
+      }
+      else if(jQuery('md-bottom-sheet').length > 0 ) {
+        //If bottom sheet is open it will close and then return
+        $mdBottomSheet.cancel();
+      }
+      else if(jQuery('[id^=dialog]').length > 0 ){
+        //If popup dialog is open it will close and then return
+        $mdDialog.cancel();
+      }
+      else if(jQuery('md-menu-content').length > 0 ){
+        //If md-menu is open it will close and then return
+        $mdMenu.hide();
+      }
+      else if(jQuery('md-select-menu').length > 0 ){
+        //If md-select is open it will close and then return
+        $mdSelect.hide();
+      }
+
+      else{
+
+
+        if($ionicHistory.backView() == null){
+
+          //Check is popup dialog is not open.
+          if(jQuery('[id^=dialog]').length == 0 ) {
+
+            // mdDialog for show $mdDialog to ask for
+            // Confirmation to close the application.
+
+            $mdDialog.show({
+              controller: 'DialogController',
+              templateUrl: 'confirm-dialog.html',
+              targetEvent: null,
+              locals: {
+                displayOption: {
+                  title: "Confirmation",
+                  content: "Do you want to close the application?",
+                  ok: "Confirm",
+                  cancel: "Cancel"
+                }
+              }
+            }).then(function () {
+              //If user tap Confirm at the popup dialog.
+              //Application will close.
+              ionic.Platform.exitApp();
+            }, function () {
+              // For cancel button actions.
+            }); //End mdDialog
+          }
+        }
+        else{
+          //Go to the view of lasted state.
+          $ionicHistory.goBack();
+        }
+      }
+
+    },100);
 
   // Form data for the login modal
   $scope.loginData = {};

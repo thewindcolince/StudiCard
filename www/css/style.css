@@ -18,4 +18,80 @@
   padding: 15%;
 
 }
+.editUser{
+  border-radius: 50%;
+  background-color: rgb(255,82,82);
+  color:white;
+  padding: 15px;
+  line-height: 4 !important;
+  vertical-align: text-bottom;
+}
 
+.addUser{
+  border-radius: 50%;
+  background-color: rgb(255,82,82);
+  color:white;
+  padding: 15px;
+  line-height: 4 !important;
+  vertical-align: text-bottom;
+}
+.heabUser .col-25{
+  text-align: center;
+}
+.heabUser{
+  text-align: center;
+}
+.material-background {
+  background-color: #e91e63 !important;
+  border-style: none;
+}
+.material-background-nav-bar {
+  background-color: #e91e63 !important;
+  border-style: none;
+}
+.calend .location-item .location-img {
+  height: 110px;
+  background-size: cover;
+  border-top-right-radius: 2px;
+  border-top-left-radius: 2px;
+}
+
+.social .face{
+  color:white;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: blue;
+  border: 2px solid rgb(255,82,82);;
+}
+.social .twi{
+  color:white;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: #007aff;
+  border: 2px solid rgb(255,82,82);;
+}
+.date{
+  color: rgb(255,82,82);
+  font-size: 15px;
+}
+
+.social .gle{
+  color:white;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: red;
+  border: 2px solid rgb(255,82,82);;
+}
+
+.calend > .scroll {
+  overflow-y: hidden;
+}
+.calend .scroll {
+  overflow-y: hidden;
+}
+.slider {
+  height: 100%;
+}
+.slider {
+  overflow-y: auto;
+}
